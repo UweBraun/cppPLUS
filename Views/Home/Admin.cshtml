@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<h4>@ViewBag.Heading</h4>
+<p style="text-align:right">@ViewBag.User </p>
+@{
+    ViewBag.Title = "Admin Page";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<p>
+    @Html.ActionLink("PersonalMaster","Create", "PersonalMasters")
+</p>
+
+<style>
+    .jumbotron {
+        background-color: #669999; 
+        color: #ffffff;
+    }
+</style>
+
+<div class="jumbotron">
+    <h2>Administrator Area</h2>
+    @*<p class="lead">Administrator Area</p>*@
+    <p> Manage Admin functions like Clients, Users, Corporations and other Settings</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Users and Clients</h2>
+        <p>
+            Clients define areas in the cppPLUS which are either all public or client specific.
+        </p>
+
+    </div>
+    <div class="col-md-4">
+        <h2>Corporations and Entities</h2>
+        <p>
+            Corporations represent real-live organizations like can be found in the Industry. IOCs like SHELL or EXXON or chemicals companies like DOW.
+            Corporations consist of Entities, which typically represent existing legal entities (Inc, Ltd, AG...)
+        </p>
+
+    </div>
+    <div class="col-md-4">
+        <h2>Other</h2>
+        <p>Management of Master Data</p>
+
+    </div>
+</div>

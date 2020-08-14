@@ -1,0 +1,197 @@
+﻿@model IEnumerable<cppPLUS_2407.Models.PersonalMaster>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+<h3 style="text-align:right">@ViewBag.Text </h3>
+<h3 style="text-align:right">@ViewBag.Text2 </h3>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ASPID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoleID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserStatus)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.UserBackground)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.UserVerification)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.ShortName)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.SystemName)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.PostalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MobilePhone)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Linkedin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Xing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hyperlink1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfilePic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserCmntPub)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserCmntHid)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.UserID_AddMod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateModified)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateAdded)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.AddAddressFld)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryList.Country)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.UserID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ASPID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ClientID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.RoleID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.UserStatus)
+    </td>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.UserBackground)
+        </td>*@
+    <td>
+        @Html.DisplayFor(modelItem => item.UserVerification)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.FirstName)
+    </td>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.MiddleName)
+        </td>*@
+    <td>
+        @Html.DisplayFor(modelItem => item.LastName)
+    </td>
+    @*<td>
+        @Html.DisplayFor(modelItem => item.ShortName)
+    </td>*@
+    <td>
+        @Html.DisplayFor(modelItem => item.SystemName)
+    </td>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.PostalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Street)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MobilePhone)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Linkedin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Xing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hyperlink1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfilePic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserCmntPub)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserCmntHid)
+        </td>*@
+    <td>
+        @Html.DisplayFor(modelItem => item.UserID_AddMod)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DateModified)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DateAdded)
+    </td>
+    @*<td>
+        @Html.DisplayFor(modelItem => item.AddAddressFld)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CountryList.Country)
+    </td>*@
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.UserID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.UserID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.UserID })
+    </td>
+</tr>
+}
+
+</table>

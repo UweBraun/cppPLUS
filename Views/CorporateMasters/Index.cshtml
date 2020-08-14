@@ -1,0 +1,69 @@
+﻿@model IEnumerable<cppPLUS_2407.Models.CorporateMaster>
+@{   
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CorporateShort)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CorporateEntityName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateModified)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateAdded)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryList.Country)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CorporateShort)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CorporateEntityName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateModified)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateAdded)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountryList.Country)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Corporate_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Corporate_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Corporate_ID })
+        </td>
+    </tr>
+}
+
+</table>

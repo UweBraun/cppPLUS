@@ -1,0 +1,91 @@
+﻿@model cppPLUS_2407.Models.EntityMaster
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EntityMaster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EntityShort)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntityShort)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EntityLegalName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntityLegalName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateModified)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateModified)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateAdded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateAdded)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CorporateMaster.CorporateShort)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CorporateMaster.CorporateShort)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CountryList.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CountryList.Country)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EntityID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

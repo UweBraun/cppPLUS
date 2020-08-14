@@ -1,0 +1,82 @@
+﻿@model IEnumerable<cppPLUS_2407.Models.EntityMaster>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EntityShort)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EntityLegalName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateModified)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateAdded)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CorporateMaster.CorporateShort)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryList.Country)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntityShort)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntityLegalName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateModified)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateAdded)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CorporateMaster.CorporateShort)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountryList.Country)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EntityID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EntityID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EntityID })
+        </td>
+    </tr>
+}
+
+</table>
